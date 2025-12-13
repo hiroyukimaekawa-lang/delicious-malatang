@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>赤坂マーラータン - 美味いマーラータン</title>
+    <title>美味いマーラータン - 小田急相模原駅から徒歩3分</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>赤坂マーラータン</h1>
-                    <p class="tagline">美味いマーラータン</p>
+                    <h1>美味いマーラータン</h1>
+                    <p class="tagline">小田急相模原駅南口から徒歩3分</p>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
@@ -24,7 +24,6 @@
                         <li><a href="#menu">メニュー</a></li>
                         <li><a href="#about">当店について</a></li>
                         <li><a href="#order">ネット注文</a></li>
-                        <li><a href="#reservation">予約</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </nav>
@@ -40,11 +39,11 @@
     <!-- メインビジュアル -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">赤坂マーラータン</h2>
-            <p class="hero-subtitle">本格的なマーラータンを味わう</p>
+            <h2 class="hero-title">美味いマーラータン</h2>
+            <p class="hero-subtitle">本格的な四川風マーラータン鍋を味わう</p>
             <div class="hero-buttons">
-                <a href="#reservation" class="btn btn-primary">予約する</a>
-                <a href="#order" class="btn btn-secondary">ネット注文</a>
+                <a href="#order" class="btn btn-primary">ネット注文</a>
+                <a href="#contact" class="btn btn-secondary">店舗情報</a>
             </div>
         </div>
     </section>
@@ -55,9 +54,14 @@
             <div class="info-card">
                 <h3>店舗情報</h3>
                 <div class="info-details">
-                    <p><strong>住所:</strong> 東京都港区赤坂6丁目13-3　1F</p>
-                    <p><strong>営業時間:</strong> 11:00 - 22:00</p>
-                    <p><strong>定休日:</strong> 不定休</p>
+                    <p><strong>住所:</strong> 神奈川県相模原市南区松が枝町18-11 岡田ビル 1F</p>
+                    <p><strong>最寄り駅:</strong> 小田急相模原駅南口から徒歩3分</p>
+                    <p><strong>営業時間:</strong> 10:00 - 23:00（月〜日・祝日）</p>
+                    <p><strong>席数:</strong> 27席（カウンター4席、テーブル23席）</p>
+                    <p><strong>禁煙:</strong> 全席禁煙</p>
+                    <p><strong>駐車場:</strong> 無</p>
+                    <p><strong>支払い方法:</strong> 現金のみ（カード・電子マネー・QRコード決済不可）</p>
+                    <p><strong>サービス:</strong> ドリンク持込可、お子様連れ可（小学生可）</p>
                 </div>
             </div>
         </div>
@@ -102,9 +106,10 @@
         <div class="container">
             <h2 class="section-title">当店について</h2>
             <div class="about-content">
-                <p>赤坂マーラータンは、本格的な四川風マーラータン鍋を提供するレストランです。</p>
+                <p>美味いマーラータンは、本格的な四川風マーラータン鍋を提供する中華料理店です。</p>
                 <p>厳選された食材と独自のスパイスブレンドで、お客様に最高の味をお届けします。</p>
-                <p>店内は落ち着いた雰囲気で、お一人様からグループでのご利用まで、様々なシーンに対応しております。</p>
+                <p>小田急相模原駅から徒歩3分とアクセス良好。全席禁煙で、お一人様からグループでのご利用まで、様々なシーンに対応しております。</p>
+                <p>2025年12月6日オープンの新しいお店です。ぜひ一度お越しください！</p>
             </div>
         </div>
     </section>
@@ -138,60 +143,24 @@
         </div>
     </section>
 
-    <!-- 予約セクション -->
-    <section id="reservation" class="reservation-section">
-        <div class="container">
-            <h2 class="section-title">予約</h2>
-            <div class="reservation-content">
-                <p>ご来店のご予約を承っております。</p>
-                <form class="reservation-form">
-                    <div class="form-group">
-                        <label for="reservation-name">お名前</label>
-                        <input type="text" id="reservation-name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reservation-phone">電話番号</label>
-                        <input type="tel" id="reservation-phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reservation-date">希望日時</label>
-                        <input type="datetime-local" id="reservation-date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reservation-guests">人数</label>
-                        <select id="reservation-guests" name="guests" required>
-                            <option value="">選択してください</option>
-                            <option value="1">1名</option>
-                            <option value="2">2名</option>
-                            <option value="3">3名</option>
-                            <option value="4">4名</option>
-                            <option value="5">5名以上</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">予約を送信</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- お問い合わせセクション -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">お問い合わせ</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p><strong>住所:</strong> 東京都港区赤坂6丁目13-3　1F</p>
-                    <p><strong>電話:</strong> 03-XXXX-XXXX</p>
-                    <p><strong>メール:</strong> info@akasaka-marlatan.com</p>
+                    <p><strong>住所:</strong> 神奈川県相模原市南区松が枝町18-11 岡田ビル 1F</p>
+                    <p><strong>最寄り駅:</strong> 小田急相模原駅南口から徒歩3分</p>
+                    <p><strong>営業時間:</strong> 10:00 - 23:00（月〜日・祝日）</p>
+                    <p><strong>お問い合わせ:</strong> 店舗へ直接お問い合わせください</p>
+                    <p><strong>予約:</strong> 予約不可（直接ご来店ください）</p>
                 </div>
                 <div class="social-links">
-                    <h3>ソーシャルメディア</h3>
+                    <h3>フォロー・お問い合わせ</h3>
                     <div class="social-icons">
-                        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer">TikTok</a>
-                        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+                        <a href="https://www.instagram.com/meiweiimaratan?igsh=MXd2c3A2YjhoOGxlMg==" class="social-icon" target="_blank" rel="noopener noreferrer">Instagram</a>
                     </div>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">最新情報はInstagramでご確認いただけます</p>
                 </div>
             </div>
         </div>
@@ -202,12 +171,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>赤坂マーラータン</h4>
-                    <p>美味いマーラータン</p>
+                    <h4>美味いマーラータン</h4>
+                    <p>神奈川県相模原市南区松が枝町18-11 岡田ビル 1F</p>
+                    <p>小田急相模原駅南口から徒歩3分</p>
                 </div>
                 <div class="footer-section">
-                    <h4>フランチャイズ募集</h4>
-                    <p>フランチャイズ展開を検討されている方はお気軽にお問い合わせください。</p>
+                    <h4>営業情報</h4>
+                    <p>営業時間: 10:00 - 23:00（月〜日・祝日）</p>
+                    <p>予約: 予約不可</p>
+                    <p>支払い: 現金のみ</p>
+                    <p>駐車場: 無</p>
                 </div>
                 <div class="footer-section">
                     <h4>リンク</h4>
@@ -216,12 +189,12 @@
                         <li><a href="#menu">メニュー</a></li>
                         <li><a href="#about">当店について</a></li>
                         <li><a href="#order">ネット注文</a></li>
-                        <li><a href="#reservation">予約</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 赤坂マーラータン. All rights reserved.</p>
+                <p>&copy; 2025 美味いマーラータン. All rights reserved.</p>
             </div>
         </div>
     </footer>

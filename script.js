@@ -33,19 +33,7 @@ if (orderForm) {
     });
 }
 
-const reservationForm = document.querySelector('.reservation-form');
-if (reservationForm) {
-    reservationForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(reservationForm);
-        const data = Object.fromEntries(formData);
-        
-        // ここで実際の送信処理を実装
-        alert('ご予約ありがとうございます！\n確認のため、後ほどお電話させていただきます。');
-        reservationForm.reset();
-    });
-}
+// 予約フォームは削除（予約不可のため）
 
 // スクロール時のヘッダー効果
 let lastScroll = 0;
