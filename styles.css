@@ -191,17 +191,15 @@ section p {
 .menu-section {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
+    padding: 0;
 }
 
 .menu-slideshow {
     width: 100%;
-    max-width: 800px;
     height: 500px;
-    margin: 2rem auto 0;
+    margin: 0;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .slideshow-container {
@@ -333,19 +331,128 @@ section p {
 
 /* 商品メニューセクション */
 .product-menu-section {
-    background-color: #1a1a1a;
-    padding: 60px 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23000"/><path d="M0 50 Q25 30 50 50 T100 50" stroke="%23111" stroke-width="2" fill="none"/><path d="M0 30 Q25 10 50 30 T100 30" stroke="%23111" stroke-width="1" fill="none"/><path d="M0 70 Q25 90 50 70 T100 70" stroke="%23111" stroke-width="1" fill="none"/></svg>');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
     border-bottom: none;
+    position: relative;
+}
+
+.product-menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+    z-index: 1;
+}
+
+.product-menu-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 .menu-card {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    background-color: #fff;
-    border: 3px solid #fff;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+    padding: 50px 20px;
+    box-shadow: none;
+}
+
+/* スパイス説明セクション */
+.spice-description-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.spice-description-text {
+    color: #d4af37;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0;
+}
+
+/* メインメニューコンテンツ */
+.main-menu-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-image-section {
+    flex: 1;
+    min-height: 400px;
+}
+
+.menu-featured-image {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.menu-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-soup-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.menu-soup-subtitle {
+    font-size: 1.3rem;
+    color: #d4af37;
+    margin: 0;
+    font-weight: 500;
+}
+
+.menu-price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-main-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.3);
+}
+
+.menu-custom-text {
+    font-size: 1.1rem;
+    color: #d4af37;
+    margin: 0;
+    font-weight: 500;
+}
+
+.menu-weight-price {
+    font-size: 1.2rem;
+    color: #d4af37;
+    margin: 0;
+    font-weight: 600;
 }
 
 .menu-logo {
@@ -828,8 +935,18 @@ section p {
     color: #d32f2f;
 }
 
+/* モバイル改行（デスクトップでは非表示） */
+br.mobile-break {
+    display: none !important;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
+    /* モバイル改行を表示 */
+    br.mobile-break {
+        display: block !important;
+    }
+
     .header .container {
         flex-direction: column;
         gap: 1rem;
@@ -883,39 +1000,60 @@ section p {
         line-height: 1.8;
     }
 
-    .menu-card {
-        padding: 20px;
+    .product-menu-section {
+        padding: 60px 0;
     }
 
-    .menu-logo-text {
+    .menu-card {
+        padding: 30px 20px;
+    }
+
+    .spice-description-section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .spice-description-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .main-menu-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .menu-image-section {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .menu-featured-image {
+        min-height: 300px;
+    }
+
+    .menu-info-section {
+        width: 100%;
+    }
+
+    .menu-soup-title {
         font-size: 1.8rem;
     }
 
-    .menu-spice-section {
-        flex-direction: column;
+    .menu-soup-subtitle {
+        font-size: 1.1rem;
     }
 
-    .spice-options {
-        flex-wrap: wrap;
-        justify-content: center;
+    .menu-main-price {
+        font-size: 2rem;
     }
 
-    .soup-options {
-        flex-direction: column;
-        gap: 20px;
+    .menu-custom-text {
+        font-size: 1rem;
     }
 
-    .topping-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .topping-text {
-        text-align: center;
-    }
-
-    .topping-text p {
-        text-align: center;
+    .menu-weight-price {
+        font-size: 1.1rem;
     }
 
     .map-container {
